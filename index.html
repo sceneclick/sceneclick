@@ -298,8 +298,8 @@
         .nav-links {
             display: inline-block;
             border-bottom: 2px solid #00ffff;
-            padding-bottom: 5px;
-            margin-bottom: 45px; /* увеличено для симметрии */
+            padding-bottom: 20px;   /* расстояние от кнопок до линии */
+            margin-bottom: 20px;      /* расстояние от линии до следующего блока (такое же, для симметрии) */
         }
         .nav-links .cyber-button {
             margin: 5px 2px !important;
@@ -308,6 +308,11 @@
         .nav-wrapper {
             text-align: center;
             margin: 30px 0;
+        }
+
+        /* Увеличенный отступ для списков внутри карточек */
+        .card ol, .card ul {
+            padding-left: 30px;
         }
 
         .antivirus-note {
@@ -361,7 +366,7 @@
             .subtitle { font-size: 1rem; letter-spacing: 4px; }
             h1 { 
                 font-size: 1.8rem !important; 
-                margin-top: 45px !important; 
+                margin-top: 0 !important; 
             }
             .main-container { padding: 10px; }
             .cyber-button { padding: 10px 20px; font-size: 0.9rem; }
@@ -386,17 +391,23 @@
                 letter-spacing: 3px;
             }
             .nav-links {
-                margin-bottom: 45px; /* сохраняем отступ на мобильных */
+                margin-bottom: 20px; /* сохраняем равный отступ на мобильных */
+            }
+            .card ol, .card ul {
+                padding-left: 25px; /* чуть меньше на мобильных */
             }
         }
         @media (max-width: 480px) {
             h1 { 
                 font-size: 1.5rem !important; 
-                margin-top: 45px !important;
+                margin-top: 0 !important;
             }
             .logo { font-size: 2rem; }
             .subtitle { letter-spacing: 2px; }
             .cyber-button { padding: 8px 12px; font-size: 0.8rem; }
+            .card ol, .card ul {
+                padding-left: 20px;
+            }
         }
     </style>
 </head>
@@ -435,7 +446,7 @@
         </div>
 
         <!-- Герой-секция -->
-        <div style="text-align: center; margin: 45px 0 40px;"> <!-- верхний отступ увеличен до 45px -->
+        <div style="text-align: center; margin: 0 0 40px;"> <!-- верхний отступ убран, он теперь от навигации -->
             <h1 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(135deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Освободи руки<br>от повторяющихся кликов</h1>
             <p style="max-width: 700px; margin: 0 auto 30px; color: #aaa;">SceneClick автоматизирует любые действия мышью, чтобы вы сосредоточились на важном. Работает там, где нужна монотонная рутина — заполнение форм, тестирование, обработка документов.</p>
             <a href="https://disk.yandex.ru/d/HA8-rGDuaic9wg" class="cyber-button download">📥 Скачать бесплатно</a>
